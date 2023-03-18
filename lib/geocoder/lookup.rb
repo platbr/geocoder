@@ -93,7 +93,8 @@ module Geocoder
         :ip2location,
         :ipgeolocation,
         :ipqualityscore,
-        :ipbase
+        :ipbase,
+        :proxycheck_io
       ]
     end
 

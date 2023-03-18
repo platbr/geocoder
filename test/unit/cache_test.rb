@@ -22,7 +22,8 @@ class CacheTest < GeocoderTestCase
         l == :maxmind_local ||
         l == :geoip2 ||
         # uses the AWS gem, not HTTP requests with caching
-        l == :amazon_location_service
+        l == :amazon_location_service ||
+        l == :proxycheck_io
       Geocoder.configure(:lookup => l)
       set_api_key!(l)
       results = Geocoder.search("Madison Square Garden")

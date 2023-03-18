@@ -8,6 +8,7 @@ class ResultTest < GeocoderTestCase
       next if [
         :ip2location, # has pay-per-attribute pricing model
         :twogis, # cant find 'Madison Square Garden'
+        :proxycheck_io # cant find 'Madison Square Garden'
       ].include?(l)
 
       Geocoder.configure(:lookup => l)
@@ -24,6 +25,7 @@ class ResultTest < GeocoderTestCase
         :nationaal_georegister_nl, # no reverse geocoding
         :melissa_street, # reverse geocoding not implemented
         :twogis, # cant find 'Madison Square Garden'
+        :proxycheck_io # reverse geocoding not implemented
       ].include?(l)
 
       Geocoder.configure(:lookup => l)
